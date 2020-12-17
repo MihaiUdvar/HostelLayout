@@ -1,0 +1,284 @@
+/* CSS Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* main styling */
+body {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   line-height: 1.5em;
+}
+
+a {
+   color: #333;
+   text-decoration: none;
+}
+
+h1,h2,h3 {
+   padding-bottom: 20px;
+}
+
+p {
+   margin: 10px 0;
+}
+
+/* utility */
+.container {
+   max-width: 1100px;
+   margin:auto;
+   padding: 0 20px;
+}
+
+.text-primary {
+   color: #fea521;
+}
+
+.intro {
+   font-size: 19px;
+   text-align: center;
+   line-height: 1.7em;
+   width: 80%;
+   margin:auto;
+   padding:20px;
+}
+
+.btn {
+   display: inline-block;
+   font-size:18px;
+   color:white;
+   background-color: #1d0f0a;
+   padding: 13px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.btn:hover {
+   background-color: #03506f;
+}
+
+.btn-dark {
+   background-color: #212121;
+   color: #eeeeee;
+}
+
+.btn-dark:hover {
+   background-color: #212121;
+   color: #03506f;
+}
+
+.bg-light {
+   background-color: #c19d7d;
+}
+
+.bg-blue {
+   background-color: #03506f;
+   color:#eee;
+}
+
+/* padding  */
+
+.py-1 { padding: 10px 0;}
+.py-2 { padding: 20px 0;}
+.py-3 { padding: 30px 0;}
+.px-1 { padding: 0 10px;}
+.px-2 { padding: 0 20px;}
+
+/* Navbar */
+#navbar {
+   background-color: #c19d7d;
+   /* background-color: #44561e; */
+   color: #eeeeee;
+   /* https://css-tricks.com/forums/topic/float-removing-background-color/ */
+   overflow: hidden;
+}
+
+#navbar a{
+   color: #eeeeee; 
+}
+
+#navbar h1 {
+   float: left;
+   padding-top: 20px;
+}
+
+#navbar ul {
+   list-style: none;
+   float: right;
+}
+
+#navbar ul li {
+   float: left;
+}
+
+#navbar ul li a {
+   display: block;
+   padding: 20px;
+   text-align: center;
+}
+
+#navbar ul li a:hover
+{
+   background-color: #eee;
+   color: #212121;
+}
+
+#navbar .current{
+   background-color: #eee;
+   color: #212121;
+}
+
+/* Show case */
+#showcase {
+   background: url('../images/andreas-gucklhorn-mawU2PoJWfU-unsplash.jpg') no-repeat center center/cover;
+   height: 600px;
+}
+
+#showcase .showcase-content {
+   /* color: #382933; */
+   color: white;
+   text-align: center;
+   padding-top: 200px;
+}
+
+#showcase .showcase-content h1 {
+   font-size: 60px;
+   line-height: 1.2em;
+}
+
+/* home info */
+
+#home-info {
+   height: 300px;
+}
+
+#home-info .info-img {
+   float: left;
+   width: 50%;
+   background: url('../images/vidar-nordli-mathisen-tvnUb59Fk30-unsplash.jpg') no-repeat center center/cover;
+   min-height: 100%;
+}
+
+#home-info .info-content {
+   float: right;
+   width: 50%;
+   height: 100%;
+   text-align: center;
+   padding: 30px 50px;
+   overflow: hidden;
+   font-size:19px;
+   background-color: #c19d7d;
+   color: black;
+}
+
+/* Features */
+.box {
+   float:left;
+   width: 33.3%;
+   padding: 50px;
+   text-align: center;
+}
+
+.fas {
+   font-size: 40px;
+}
+
+.box i {
+   margin: 10px;
+}
+
+/* The way for clearing the floats */
+.clr {
+   clear: both;
+}
+
+/* about info */
+#about-info .info-right {
+   float: right;
+   width: 50%;
+   min-height: 100%;
+}
+
+#about-info .info-right img{
+   display: block;
+   width: 70%;
+   margin: auto;
+   /* border-radius: 50%; */
+}
+
+#about-info .info-left {
+   width: 50%;
+   float: left;
+   min-height: 100%;
+}
+
+/* testimonials*/
+#testimonials {
+   height: 650px;
+   width: 60%;
+   margin: auto;
+   background: url('../images/alex-batonisashvili-GlU-bGYgLlg-unsplash.jpg') no-repeat center center/cover;
+   padding-top: 40px;
+   margin-bottom: 40px;
+}
+
+#testimonials .testimonial {
+   padding: 20px;
+   margin-bottom: 40px;
+   height: 11em;
+   border-radius: 10px;
+}
+
+
+#testimonials .testimonial img {
+   width: 140px;
+   float: left;
+   padding-right: 20px;
+}
+
+#testimonials h2 {
+   text-align: center;
+   padding-bottom: 30px;
+   color: #1d0f0a;
+   font-size: 2em;
+}
+
+
+/* -----------------contact form------------------------- */
+
+
+#contact-form .form-group {
+   margin-bottom: 20px;
+}
+
+#contact-form label {
+   display: block;
+   margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea
+{
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ddd;
+}
+
+#contact-form textarea {
+   height: 200px;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+   outline: none;
+   border-color: #03506f;
+}
+
+/* Footer */
+#main-footer {
+   text-align: center;
+   background-color: #c19d7d;
+   color:white;
+   padding: 20px;
+}
