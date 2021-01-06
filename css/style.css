@@ -16,19 +16,20 @@ a {
    text-decoration: none;
 }
 
-h1,h2,h3 {
-   padding-bottom: 20px;
-}
-
 p {
    margin: 10px 0;
 }
 
 /* utility */
-.container {
+.container-nav {
+   
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
    max-width: 1100px;
    margin:auto;
-   padding: 0 20px;
+   padding: 20px;
+   flex-wrap: wrap;
 }
 
 .text-primary {
@@ -39,9 +40,9 @@ p {
    font-size: 19px;
    text-align: center;
    line-height: 1.7em;
-   width: 80%;
+   width: 55%;
    margin:auto;
-   padding:20px;
+   padding:10px;
 }
 
 .btn {
@@ -69,6 +70,7 @@ p {
 }
 
 .bg-light {
+   display: flex;
    background-color: #c19d7d;
 }
 
@@ -79,11 +81,11 @@ p {
 
 /* padding  */
 
-.py-1 { padding: 10px 0;}
+/* .py-1 { padding: 10px 0;}
 .py-2 { padding: 20px 0;}
 .py-3 { padding: 30px 0;}
 .px-1 { padding: 0 10px;}
-.px-2 { padding: 0 20px;}
+.px-2 { padding: 0 20px;} */
 
 /* Navbar */
 #navbar {
@@ -91,31 +93,34 @@ p {
    /* background-color: #44561e; */
    color: #eeeeee;
    /* https://css-tricks.com/forums/topic/float-removing-background-color/ */
-   overflow: hidden;
+   /* overflow: hidden; */
+}
+
+.logo{
+   /* display: inline-block; */
 }
 
 #navbar a{
    color: #eeeeee; 
 }
 
-#navbar h1 {
-   float: left;
-   padding-top: 20px;
-}
 
-#navbar ul {
+#navbar ul {  
+   width: 200px;
+   display: flex;
    list-style: none;
-   float: right;
+   justify-content: space-around;
+   /* flex-grow: 1; */
 }
 
 #navbar ul li {
-   float: left;
+   /* height: auto;    */
 }
 
 #navbar ul li a {
-   display: block;
-   padding: 20px;
-   text-align: center;
+   /* display: block; */
+   padding: 22px;
+   /* text-align: center; */
 }
 
 #navbar ul li a:hover
@@ -136,47 +141,60 @@ p {
 }
 
 #showcase .showcase-content {
-   /* color: #382933; */
    color: white;
    text-align: center;
-   padding-top: 200px;
+   position: absolute;
+   top: 37%;
 }
 
 #showcase .showcase-content h1 {
    font-size: 60px;
    line-height: 1.2em;
+   
 }
 
-/* home info */
+
+/* --------home info ---------*/
+
 
 #home-info {
-   height: 300px;
+   height: 25em;
+   display: flex;
+   justify-content: space-between;
+   /* align-items: center; */
 }
 
-#home-info .info-img {
-   float: left;
-   width: 50%;
+.info-img {
+   flex-basis: 50%;
    background: url('../images/vidar-nordli-mathisen-tvnUb59Fk30-unsplash.jpg') no-repeat center center/cover;
    min-height: 100%;
 }
 
 #home-info .info-content {
-   float: right;
-   width: 50%;
-   height: 100%;
+   flex-basis: 50%;
    text-align: center;
-   padding: 30px 50px;
-   overflow: hidden;
+   padding: 50px;
    font-size:19px;
    background-color: #c19d7d;
    color: black;
 }
 
 /* Features */
+#features{
+   display: flex;
+   justify-content: space-around;
+}
+
+@media (max-width:800px){
+   #features{
+      display: flex;
+      flex-direction: column;
+      /* justify-content: space-around; */
+   }
+}
+
 .box {
-   float:left;
-   width: 33.3%;
-   padding: 50px;
+   padding: 40px;
    text-align: center;
 }
 
@@ -185,38 +203,50 @@ p {
 }
 
 .box i {
-   margin: 10px;
+   margin: 20px;
 }
 
-/* The way for clearing the floats */
-.clr {
-   clear: both;
-}
 
-/* about info */
+/* ---------about info--------- */
+
+.container-about{
+   display: flex;
+   justify-content:space-around;
+   align-items: center;
+   height: 300px;
+   width: 90%;
+   margin: auto;
+   flex-wrap: wrap;
+}
+.text-primary{
+   width: 300px;
+}
 #about-info .info-right {
-   float: right;
-   width: 50%;
-   min-height: 100%;
+
 }
 
 #about-info .info-right img{
-   display: block;
-   width: 70%;
-   margin: auto;
-   /* border-radius: 50%; */
+   width :300px;
 }
 
-#about-info .info-left {
-   width: 50%;
-   float: left;
+#about-info .info-left { 
+   width: 50%;   
    min-height: 100%;
+   padding-top: 50px;
+  
 }
 
 /* testimonials*/
+
+.container-testimonials{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+}
 #testimonials {
    height: 650px;
-   width: 60%;
+   width: 80%;
    margin: auto;
    background: url('../images/alex-batonisashvili-GlU-bGYgLlg-unsplash.jpg') no-repeat center center/cover;
    padding-top: 40px;
@@ -232,8 +262,7 @@ p {
 
 
 #testimonials .testimonial img {
-   width: 140px;
-   float: left;
+   width: 150px;
    padding-right: 20px;
 }
 
@@ -245,8 +274,13 @@ p {
 }
 
 
-/* -----------------contact form------------------------- */
+/* -------------contact form------------ */
 
+.container-form {
+   width: 1100px;
+   margin:auto;
+   padding: 20px;
+}
 
 #contact-form .form-group {
    margin-bottom: 20px;
@@ -273,6 +307,11 @@ p {
 #contact-form textarea:focus {
    outline: none;
    border-color: #03506f;
+}
+#contact-info{
+   display: flex;
+   justify-content: center;
+   padding-top: 20px;
 }
 
 /* Footer */
